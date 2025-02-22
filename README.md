@@ -22,7 +22,8 @@
         -express-validator: Para validar datos en las rutas.
 
 3- Se debe ahora crear el proyecto de next
-    mkdir mi-proyecto-next
+    
+    kdir mi-proyecto-next
     cd mi-proyecto-next
     npx create-next-app@latest .
     npm run dev
