@@ -5,3 +5,10 @@
     Para instalar el node adecuado:
     * nvm install 18.17.1
     * nvm use 18.17.1
+
+    Para instalar express se debe:
+    * npm install express
+    * npm install express-generator -g (COMANDO QUE SIRVE PARA CREAR EL ESQUELETO DE EXPRESS)
+    * express --view=pug myapp (COMANDO PARA CREAR EL PROYECTO CON TODAS SUS CARPETAS)
+
+    
