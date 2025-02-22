@@ -23,7 +23,7 @@
 
 3- Se debe ahora crear el proyecto de next
     
-    kdir mi-proyecto-next
+    mkdir mi-proyecto-next
     cd mi-proyecto-next
     npx create-next-app@latest .
     npm run dev
