@@ -1,0 +1,37 @@
+.title-table {
+    margin: 5%;
+    width: 499px;
+    height: 19px;
+    left: 68px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.25%;
+    position: relative;
+    /* Asegúrate de que el contenedor tenga una posición adecuada */
+}
+
+
+.header-table-titles {
+    width: 279px;
+    height: 18px;
+    gap: 4px;
+    color: #f2f4ff;
+}
+
+.action {
+    font-family: Nunito;
+    font-weight: 700;
+    font-size: 14px;
+    /* Esto podría no ser compatible con CSS normal */
+    line-height: 20px;
+    letter-spacing: 0.1%;
+    text-align: center;
+    text-transform: none;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    background: #2754F7;
+    border-bottom: 2px solid #2754F7;
+}

@@ -1,0 +1,74 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .black-background {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.frame {
+    width: 100%;
+    height: 100%;
+    top: 299px;
+    left: 236px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    /* Añadir un poco de padding para que el contenido no se toque los bordes */
+    padding: 10px;
+    display: flex;
+    box-sizing: border-box;
+  }
+
+/* Contenedor azul con gradiente y opacidad */
+.first-image-background {
+    width: 50%;
+    height: 100%;
+    background-image: 
+    url('https://s3-alpha-sig.figma.com/img/a57f/b6f5/d09df55185bc4fee2167b90f10d18288?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VMAkWG~OzTxQNd5dzw7tUXdPGD4dlClO-vNOxLOUL9HERPPxBZ82HPYz9j9QVqY5MM9aSXPwg~cWuy1T996TjE3ExsA3KcF76NBCIliPhrPnFWdAHYs74u5GWxV~jITojTiy7kmZoMmD2ElKmNWlrYEA~a89iX957q9R8huMECMsKunu79pWFimpytKCI3jOmsVgOAi0t-6Ctdg07kaN48xf5awi9ne84bvoBLhAnJtIre8eOfF2Q4eSt8bAlIvFU-8DMeQz7O2snScsUvgwCF4X-GVT9gqes77Vp0jbOMPk6Q8frVLUkbNbCrMKvsXq7k~ueRO2i2tlfe4EUFyvnA__'),
+    linear-gradient(217.64deg, #006DFF, #5038ED 106.73%);
+    opacity: 0.06;
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-blend-mode: overlay; /* Aplica el gradiente sobre la imagen */
+    opacity: 0.06; /* Aplica opacidad al fondo combinado */
+    position: relative;
+  }
+
+
+  .layer-image {
+    width: 129px;  /* Ajuste al ancho especificado */
+    height: 32.45px; /* Ajuste a la altura especificada */
+    background-image: 
+      url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShq_b73Oc5XMNxInufJfwxNK_9YA2g4xR7QA&s'); /* Reemplaza con la URL de la imagen que deseas usar */
+    background-size: cover;
+    background-position: center;
+    position: absolute; /* Posiciona este div por encima del primero */
+    top: 165px;  /* Ajuste a la posición superior */
+    left: 829px;  /* Ajuste a la posición izquierda */
+    z-index: 1; /* Asegura que la capa de la imagen esté por encima */
+    opacity: 0.6; /* Ajusta la opacidad de la capa de la imagen si es necesario */
+  }
+
+  /* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .first-image-background {
+        width: 100%;
+        height: 40vh;  /* 40% de la altura de la pantalla */
+        background-position: top center;
+        margin-bottom: 10px; /* Separación ajustada para móviles */
+      }
+    
+      .layer-image {
+        width: 80%;  /* Ajustado para móviles */
+        height: auto;
+        margin-top: 10px; /* Separación ajustada */
+        margin-left: 10%; /* Centrado */
+        opacity: 0.8; /* Ajustado para mejor visibilidad */
+      }
+  }
