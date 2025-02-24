@@ -306,10 +306,25 @@ const RegisterCreditComponent = () => {
 
             {/* Columna 2 */}
             <Grid item xs={12} md={6}>
-              <Toolbar sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                <img src="https://cdn.aglty.io/scotia-bank-mexico/digital-factory/images/brand-scotia/banner-brand-scotiabank.svg" alt="Logo" style={{ width: 40, height: 40, marginRight: 16 }} />
+              <Toolbar
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  width: '100%',
+                  justifyContent: { xs: 'center', sm: 'flex-start' }, // Centrado en mobile, alineado a la izquierda en pantallas más grandes
+                  flexDirection: { xs: 'column', sm: 'row' }, // En columna en mobile, fila en pantallas más grandes
+                }}
+              >
+                <img src="/layer1.png" alt="Logo" style={{ width: "20%" }} />
               </Toolbar>
-              <Typography variant="h5" gutterBottom>
+
+              <Typography
+                variant="h5"
+                gutterBottom
+                sx={{
+                  textAlign: { xs: 'center', sm: 'left' }, // Centrado solo en mobile
+                }}
+              >
                 Registro
               </Typography>
               <form onSubmit={handleSubmit}>
@@ -428,10 +443,13 @@ const RegisterCreditComponent = () => {
               {/* Columna 1 */}
 
               <Grid item xs={12} md={6}>
-                <Toolbar sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                  <img src="https://cdn.aglty.io/scotia-bank-mexico/digital-factory/images/brand-scotia/banner-brand-scotiabank.svg" alt="Logo" style={{ width: 40, height: 40, marginRight: 16 }} />
+                <Toolbar sx={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: { xs: 'center', sm: 'flex-start' }, // Centrado en mobile, alineado a la izquierda en pantallas más grandes
+                  flexDirection: { xs: 'column', sm: 'row' } }}>
+                  <img src="/Layer1.png" alt="Logo" style={{ width: "20%" }} />
                 </Toolbar>
-                <Typography variant="h5" gutterBottom>
+                <Typography variant="h5" sx={{
+                  textAlign: { xs: 'center', sm: 'left' }, // Centrado solo en mobile
+                }} gutterBottom>
                   Datos de vivienda
                 </Typography>
 
@@ -570,7 +588,7 @@ const RegisterCreditComponent = () => {
             {/* Texto */}
             <Grid item>
               <Typography variant="h6" align="center" fontWeight="bold" style={{ marginBottom: '20px' }}>
-                ¡Es hora de la selfie! 
+                ¡Es hora de la selfie!
               </Typography>
               <Typography variant="h6" align="center" style={{ marginBottom: '20px' }}>
                 Sonríe y asegúrate de tener buena iluminación.
