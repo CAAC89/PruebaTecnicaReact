@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { Container, Grid, AppBar, Card, CardMedia, CardContent, TextField, Button, Box, Typography, Toolbar, FormControl, InputLabel, Select, MenuItem, FormHelperText } from '@mui/material';
-import Image from 'next/image';
 import { useDropzone } from 'react-dropzone';
 import '../styles/registercredit.css'; // o el path correcto de tu archivo CSS
 
