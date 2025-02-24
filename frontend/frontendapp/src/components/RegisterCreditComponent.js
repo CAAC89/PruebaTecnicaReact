@@ -208,7 +208,7 @@ const RegisterCreditComponent = () => {
   };
 
   return (
-    <Container >
+    <Container sx={{ width: '100%', maxWidth: '100%', }}>
       {
         pageindex === 0 && (
           <Grid container spacing={3}>
