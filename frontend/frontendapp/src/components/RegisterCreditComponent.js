@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Container, Grid, TextField, Button, Box, Typography, Toolbar, FormControl, InputLabel, Select, MenuItem , FormHelperText} from '@mui/material';
+import { Container, Grid, AppBar, Card, CardMedia, CardContent, TextField, Button, Box, Typography, Toolbar, FormControl, InputLabel, Select, MenuItem, FormHelperText } from '@mui/material';
 import Image from 'next/image';
 
 import '../styles/registercredit.css'; // o el path correcto de tu archivo CSS
@@ -89,13 +89,97 @@ const RegisterCreditComponent = () => {
     }
   };
   return (
-    <Container>
+    <Container sx={{
+      width: '100%',
+      height: {
+        xs: '200px', // Teléfonos pequeños
+        sm: '300px', // Tablets pequeñas
+        md: '400px', // Tablets grandes
+        lg: '500px', // Pantallas grandes
+        xl: '600px', // Pantallas muy grandes
+
+      },
+      display: 'flex',
+      mt: 1
+
+    }}>
       <Grid container spacing={3}>
         {/* Columna 1 */}
         <Grid item xs={12} md={6}>
           <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
             {/* Imagen azul */}
+            <AppBar position="static"
+              sx={{
+                backgroundImage: 'url("https://s3-alpha-sig.figma.com/img/a57f/b6f5/d09df55185bc4fee2167b90f10d18288?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VMAkWG~OzTxQNd5dzw7tUXdPGD4dlClO-vNOxLOUL9HERPPxBZ82HPYz9j9QVqY5MM9aSXPwg~cWuy1T996TjE3ExsA3KcF76NBCIliPhrPnFWdAHYs74u5GWxV~jITojTiy7kmZoMmD2ElKmNWlrYEA~a89iX957q9R8huMECMsKunu79pWFimpytKCI3jOmsVgOAi0t-6Ctdg07kaN48xf5awi9ne84bvoBLhAnJtIre8eOfF2Q4eSt8bAlIvFU-8DMeQz7O2snScsUvgwCF4X-GVT9gqes77Vp0jbOMPk6Q8frVLUkbNbCrMKvsXq7k~ueRO2i2tlfe4EUFyvnA__")',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center',
+                padding: { xs: 2, sm: 3, md: 4 }, // Padding ajustable según el tamaño de pantalla
+                width: '100%',
+                height: {
+                  xs: '600px', // Teléfonos pequeños
+                  sm: '400px', // Tablets pequeñas
+                  md: '500px', // Tablets grandes
+                  lg: '800px', // Pantallas grandes
+                  xl: '800px', // Pantallas muy grandes
+                },
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              {/* Imagen centrada dentro del AppBar */}
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  height: '100%',
+                }}
+              >
+                <img
+                  src="https://s3-alpha-sig.figma.com/img/3651/2f6c/6b37477a40c72c4c8474921fde5e333c?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VDSGt3jnD34y04AVg5tWhAdvOxU~~wMPrHOEVc41kcH2FsJJfFDjULnGey3imUDlDSZ8JatGt0VIOHS209Z2V-a-QYA5wZ~vOW9aHg4rZUk54bvlqsxVGLd-omKvX2N3aMVImwlDYBEF8~5T25mzcfPWdo7MVKbBdq3UZwVPWPNii5Czp3K50YS-5ziTMDiRuImMfks2876vEWVCDjSs6dYZqeiIHX~jzxKHl95cG~xlJX-ldzKSJDpr9hHr4thuANn-jShohOfurYHoaa8E~qXmVgFTXRM~RMRkpOU0mbR3NWj0gHg6SnRNSM2Jp3TPEemdsHU22eaTdPJFu-8T3A__"
+                  alt="Logo centrado"
+                  style={{
+                    maxWidth: '100%', // Limita el tamaño de la imagen
+                    maxHeight: '100%', // Evita que la imagen sobresalga
+                    objectFit: 'contain', // Mantiene la proporción de la imagen
+                  }}
+                />
+                <Box sx={{ position: 'initial', width: '100vw', height: '100vh', display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }}>
+                  {/* Contenedor del ícono en forma de elipse */}
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      left: 3, // margen izquierdo para que no esté pegado al borde
+                      top: '35%',
+                      transform: 'translateY(-50%)',
+                      width: 80,         // Ajusta el tamaño según necesites
+                      height: 80,
+                      borderRadius: '50%',
+                      backgroundColor: 'white',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    {/* Imagen del ícono */}
+                    <img
+                      src="https://s3-alpha-sig.figma.com/img/2963/5014/fc5d86ae449ee33a8497605771fd569d?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Pb71EhnOSxVOrZ~RdV3aZRH7T2LrP3A~Ud4oXdcu16~vFMA8NeYdnTaI2pZeCuOKrYrXmJyof9Zme~jxpgE201V62ASsPafCChmO7PUbkSelEGqS1qvoJCrxUzlItBxX-18ZuZCpwy18WuNaSNQLq~aic3savz-X9muIp63trZ4oM41NXWnOrgfnnzC4C9c-zqz5Xon2LcbMkdM5pV6jcMXTjk9kaWIrbEc8VnLz3D5N98eQXWKarvLmX9owW64KkCMwqWrrQmkXZcY~~PQnZNZ5vmp4Sec9RMq7SBebuUUnXwANsfKyIhK8P5-G9lFYldebu1JyfeTHU5iW2cmjNw__"
+                      alt="Icono elipse"
+                      style={{
+                        width: '50%',
+                        height: '50%',
+                        objectFit: 'contain'
+                      }}
+                    />
+                  </Box>
+                </Box>
+              </Box>
+
+            </AppBar>
           </Box>
+
         </Grid>
 
         {/* Columna 2 */}
