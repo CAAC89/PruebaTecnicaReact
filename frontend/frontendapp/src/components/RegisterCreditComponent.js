@@ -438,6 +438,11 @@ const RegisterCreditComponent = () => {
                   backgroundPosition: 'center',
                   padding: { xs: 1, sm: 2 },
                   width: '100%', // Asegurarse de que la barra ocupe todo el ancho
+                  padding: { xs: 2, sm: 3, md: 4 }, // Padding ajustable según el tamaño de pantalla
+                    width: '105%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                 }} />
 
               {/* Columna 1 */}
