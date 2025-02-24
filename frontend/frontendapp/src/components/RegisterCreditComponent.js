@@ -209,20 +209,7 @@ const RegisterCreditComponent = () => {
   };
 
   return (
-    <Container sx={{
-      width: '100%',
-      height: {
-        xs: '200px', // Teléfonos pequeños
-        sm: '300px', // Tablets pequeñas
-        md: '400px', // Tablets grandes
-        lg: '500px', // Pantallas grandes
-        xl: '600px', // Pantallas muy grandes
-
-      },
-      display: 'flex',
-      mt: 1
-
-    }}>
+    <Container >
       {
         pageindex === 0 && (
           <Grid container spacing={3}>
@@ -659,7 +646,7 @@ const RegisterCreditComponent = () => {
                 <img
                   src="/layer1.png"
                   alt="Imagen 1"
-                  style={{ width: '50%', height: 'auto' }}
+                  style={{ width: '20%', height: 'auto' }}
                 />
               </Grid>
             </Grid>
