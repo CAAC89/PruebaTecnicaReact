@@ -540,6 +540,54 @@ const RegisterCreditComponent = () => {
           </form>
         )
       }
+      {
+        pageindex === 2 && (
+          <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            style={{ minHeight: '100vh' }} // Centrar en toda la pantalla
+          >
+            {/* Imagen 1 */}
+            <Grid item>
+              <img
+                src="/layer1.png"
+                alt="Imagen 1"
+                style={{ width: '100%', maxWidth: '200px', height: 'auto', marginBottom: '20px' }}
+              />
+            </Grid>
+
+            {/* Imagen 2 */}
+            <Grid item>
+              <img
+                src="/photo_camera.png"
+                alt="Imagen 2"
+                style={{ width: '100%', maxWidth: '200px', height: 'auto', marginBottom: '20px' }}
+              />
+            </Grid>
+
+            {/* Texto */}
+            <Grid item>
+              <Typography variant="h6" align="center" fontWeight="bold" style={{ marginBottom: '20px' }}>
+                ¡Es hora de la selfie! 
+              </Typography>
+              <Typography variant="h6" align="center" style={{ marginBottom: '20px' }}>
+                Sonríe y asegúrate de tener buena iluminación.
+              </Typography>
+            </Grid>
+
+            {/* Botón de continuar */}
+            <Grid item>
+              <Button
+                variant="contained"
+                sx={{ backgroundColor: '#FF5C00', '&:hover': { backgroundColor: 'darkorange' }, borderRadius: 0 }}
+              >
+                Continuar
+              </Button>
+            </Grid>
+          </Grid>
+        )}
 
     </Container>
   );
