@@ -455,33 +455,55 @@ const RegisterCreditComponent = () => {
                   justifyContent: { xs: 'center', sm: 'flex-start' },
                   flexDirection: 'row' // Asegura que todo esté en fila
                 }}>
-                  <div
-                    onClick={() => getPage0()}
-                    style={{
-                      cursor: 'pointer',
+                  <Grid item xs={12} md={6}>
+                    <Toolbar sx={{
                       display: 'flex',
-                      justifyContent: 'center',
                       alignItems: 'center',
-                      width: 'auto', // El contenedor se ajusta al tamaño del contenido
-                      height: '50px', // Ajusta la altura según el ícono o el diseño
-                      display: 'flex', // Asegura que el div siempre sea visible
-                      visibility: 'visible', // Asegura visibilidad en dispositivos móviles
-                    }}
-                    sx={{
-                      display: { xs: 'flex', sm: 'none' }, // Asegura que el ícono solo se vea en dispositivos móviles
-                    }}
-                  >
-                    <img
-                      src="/arrow_left_alt.png"
-                      alt="Retroceso"
-                      style={{
-                        width: '10vw', // Ajusta el tamaño del ícono usando unidades relativas
-                        maxWidth: '40px', // Define un tamaño máximo para el ícono
-                        height: 'auto', // Mantiene la proporción del ícono
-                      }}
-                    />
-                  </div>
-                  <img src="/Layer1.png" alt="Logo" style={{ width: "20%" }} />
+                      width: '100%',
+                      justifyContent: { xs: 'center', sm: 'flex-start' },
+                      flexDirection: 'row',
+                      position: 'relative', // Necesario para posicionar el ícono
+                    }}>
+                      <Grid item sx={{ position: 'absolute', left: '10px' }}>
+                        <div
+                          onClick={() => getPage0()}
+                          style={{
+                            cursor: 'pointer',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            width: 'auto',
+                            height: '50px',
+                            visibility: 'visible',
+                          }}
+                          sx={{
+                            display: { xs: 'flex', sm: 'none' },
+                          }}
+                        >
+                          <img
+                            src="/arrow_left_alt.png"
+                            alt="Retroceso"
+                            style={{
+                              width: '10vw',
+                              maxWidth: '40px',
+                              height: 'auto',
+                            }}
+                          />
+                        </div>
+                      </Grid>
+
+                      {/* Asegurando que la imagen del logo no se solape */}
+                      <img
+                        src="/Layer1.png"
+                        alt="Logo"
+                        style={{
+                          width: "50%",
+                          marginLeft: 'auto', // Esto ayuda a que el logo se acomode sin interferir con otros elementos
+                          marginRight: 'auto', // Centra la imagen si no hay suficiente espacio a la izquierda
+                        }}
+                      />
+                    </Toolbar>
+                  </Grid>
                 </Toolbar>
                 <Typography variant="h5" sx={{
                   textAlign: { xs: 'center', sm: 'left' }, // Centrado solo en mobile
@@ -630,7 +652,7 @@ const RegisterCreditComponent = () => {
 
             </Grid>
 
-     
+
 
             <Grid container alignItems="center">
               <Grid item xs sx={{ display: 'flex', justifyContent: 'center' }}>
