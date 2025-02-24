@@ -439,17 +439,48 @@ const RegisterCreditComponent = () => {
                   padding: { xs: 1, sm: 2 },
                   width: '100%', // Asegurarse de que la barra ocupe todo el ancho
                   padding: { xs: 2, sm: 3, md: 4 }, // Padding ajustable según el tamaño de pantalla
-                    width: '105%',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                  width: '105%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                 }} />
 
               {/* Columna 1 */}
 
               <Grid item xs={12} md={6}>
-                <Toolbar sx={{ display: 'flex', alignItems: 'center', width: '100%', justifyContent: { xs: 'center', sm: 'flex-start' }, // Centrado en mobile, alineado a la izquierda en pantallas más grandes
-                  flexDirection: { xs: 'column', sm: 'row' } }}>
+                <Toolbar sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  width: '100%',
+                  justifyContent: { xs: 'center', sm: 'flex-start' },
+                  flexDirection: 'row' // Asegura que todo esté en fila
+                }}>
+                  <div
+                    onClick={() => getPage0()}
+                    style={{
+                      cursor: 'pointer',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: 'auto', // El contenedor se ajusta al tamaño del contenido
+                      height: '50px', // Ajusta la altura según el ícono o el diseño
+                      display: 'flex', // Asegura que el div siempre sea visible
+                      visibility: 'visible', // Asegura visibilidad en dispositivos móviles
+                    }}
+                    sx={{
+                      display: { xs: 'flex', sm: 'none' }, // Asegura que el ícono solo se vea en dispositivos móviles
+                    }}
+                  >
+                    <img
+                      src="/arrow_left_alt.png"
+                      alt="Retroceso"
+                      style={{
+                        width: '10vw', // Ajusta el tamaño del ícono usando unidades relativas
+                        maxWidth: '40px', // Define un tamaño máximo para el ícono
+                        height: 'auto', // Mantiene la proporción del ícono
+                      }}
+                    />
+                  </div>
                   <img src="/Layer1.png" alt="Logo" style={{ width: "20%" }} />
                 </Toolbar>
                 <Typography variant="h5" sx={{
@@ -573,12 +604,42 @@ const RegisterCreditComponent = () => {
             style={{ minHeight: '100vh' }} // Centrar en toda la pantalla
           >
             {/* Imagen 1 */}
-            <Grid item>
-              <img
-                src="/layer1.png"
-                alt="Imagen 1"
-                style={{ width: '100%', maxWidth: '200px', height: 'auto', marginBottom: '20px' }}
-              />
+            <Grid item sx={{ position: 'absolute', top: '20px', left: '20px' }}>
+              <div
+                onClick={() => getPage1()}
+                style={{
+                  cursor: 'pointer',
+                  display: 'flex',
+                  justifyContent: 'flex-start',
+                  alignItems: 'flex-start',
+                  width: 'auto',
+                  height: '50px',
+                  visibility: 'visible',
+                }}
+              >
+                <img
+                  src="/arrow_left_alt.png"
+                  alt="Retroceso"
+                  style={{
+                    width: '10vw',
+                    maxWidth: '40px',
+                    height: 'auto',
+                  }}
+                />
+              </div>
+
+            </Grid>
+
+     
+
+            <Grid container alignItems="center">
+              <Grid item xs sx={{ display: 'flex', justifyContent: 'center' }}>
+                <img
+                  src="/layer1.png"
+                  alt="Imagen 1"
+                  style={{ width: '50%', height: 'auto' }}
+                />
+              </Grid>
             </Grid>
 
             {/* Imagen 2 */}
