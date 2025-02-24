@@ -139,54 +139,101 @@ const GetCreditComponent = () => {
                       <Grid2 container spacing={2}>
                         {/* Fila 1: Una imagen en la primera columna */}
                         <Grid2 xs={6}>
-                          <img src="https://via.placeholder.com/100" alt="Imagen 1" style={{ width: '100%', height: 'auto' }} />
+                          <img src="/sco.png" alt="Imagen 1" style={{ width: '100%', height: 'auto' }} />
                         </Grid2>
 
                         <Grid2 container spacing={2}>
                           <Grid2 xs={6}>
-                            {/* Fila 1 */}
-                            <Grid2 container direction="column">
-                              <Grid2 >
-                                <Typography variant="body2" fontWeight="bold">Llave 1:</Typography>
-                              </Grid2>
-                              <Grid2 >
-                                <Typography variant="body2">Valor 1</Typography>
-                              </Grid2>
+                            <Grid2 container direction="row">
+                              CARLOS ARGUELLO
                             </Grid2>
+                            <Grid2 container direction="row">
+                              <Grid2 xs={6}>
+                                {/* Fila 1 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 1:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 1</Typography>
+                                  </Grid2>
+                                </Grid2>
 
-                            {/* Fila 2 */}
-                            <Grid2 container direction="column">
-                              <Grid2 >
-                                <Typography variant="body2" fontWeight="bold">Llave 2:</Typography>
-                              </Grid2>
-                              <Grid2 >
-                                <Typography variant="body2">Valor 2</Typography>
-                              </Grid2>
-                            </Grid2>
+                                {/* Fila 2 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 2:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 2</Typography>
+                                  </Grid2>
+                                </Grid2>
 
-                            {/* Fila 3 */}
-                            <Grid2 container direction="column">
-                              <Grid2 >
-                                <Typography variant="body2" fontWeight="bold">Llave 3:</Typography>
-                              </Grid2>
-                              <Grid2 >
-                                <Typography variant="body2">Valor 3</Typography>
-                              </Grid2>
-                            </Grid2>
+                                {/* Fila 3 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 3:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 3</Typography>
+                                  </Grid2>
+                                </Grid2>
 
-                            {/* Fila 4 */}
-                            <Grid2 container direction="column">
-                              <Grid2 >
-                                <Typography variant="body2" fontWeight="bold">Llave 4:</Typography>
+                                {/* Fila 4 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 4:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 4</Typography>
+                                  </Grid2>
+                                </Grid2>
                               </Grid2>
-                              <Grid2 >
-                                <Typography variant="body2">Valor 4</Typography>
+                              <Grid2 xs={6}></Grid2>
+                              <Grid2 xs={6}>
+                                {/* Fila 1 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 1:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 1</Typography>
+                                  </Grid2>
+                                </Grid2>
+
+                                {/* Fila 2 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 2:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 2</Typography>
+                                  </Grid2>
+                                </Grid2>
+
+                                {/* Fila 3 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 3:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 3</Typography>
+                                  </Grid2>
+                                </Grid2>
+
+                                {/* Fila 4 */}
+                                <Grid2 container direction="column">
+                                  <Grid2 >
+                                    <Typography variant="body2" fontWeight="bold">Llave 4:</Typography>
+                                  </Grid2>
+                                  <Grid2 >
+                                    <Typography variant="body2">Valor 4</Typography>
+                                  </Grid2>
+                                </Grid2>
                               </Grid2>
                             </Grid2>
                           </Grid2>
                         </Grid2>
-
-
                         {/* Divider para separar filas */}
                         <Divider sx={{ width: '100%', mt: 2 }} />
 
