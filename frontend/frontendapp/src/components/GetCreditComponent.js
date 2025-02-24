@@ -61,13 +61,14 @@ const GetCreditComponent = () => {
     <div>
       {/* Header con imagen */}
       <AppBar position="static"
-        sx={{ backgroundImage: 'url("https://s3-alpha-sig.figma.com/img/a57f/b6f5/d09df55185bc4fee2167b90f10d18288?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VMAkWG~OzTxQNd5dzw7tUXdPGD4dlClO-vNOxLOUL9HERPPxBZ82HPYz9j9QVqY5MM9aSXPwg~cWuy1T996TjE3ExsA3KcF76NBCIliPhrPnFWdAHYs74u5GWxV~jITojTiy7kmZoMmD2ElKmNWlrYEA~a89iX957q9R8huMECMsKunu79pWFimpytKCI3jOmsVgOAi0t-6Ctdg07kaN48xf5awi9ne84bvoBLhAnJtIre8eOfF2Q4eSt8bAlIvFU-8DMeQz7O2snScsUvgwCF4X-GVT9gqes77Vp0jbOMPk6Q8frVLUkbNbCrMKvsXq7k~ueRO2i2tlfe4EUFyvnA__")',
-        backgroundSize: 'auto',
-        backgroundRepeat: 'repeat',
-        backgroundPosition: 'center',
-        padding: { xs: 1, sm: 2 },
-        width: '100%', // Asegurarse de que la barra ocupe todo el ancho
-       }}>
+        sx={{
+          backgroundImage: 'url("https://s3-alpha-sig.figma.com/img/a57f/b6f5/d09df55185bc4fee2167b90f10d18288?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=VMAkWG~OzTxQNd5dzw7tUXdPGD4dlClO-vNOxLOUL9HERPPxBZ82HPYz9j9QVqY5MM9aSXPwg~cWuy1T996TjE3ExsA3KcF76NBCIliPhrPnFWdAHYs74u5GWxV~jITojTiy7kmZoMmD2ElKmNWlrYEA~a89iX957q9R8huMECMsKunu79pWFimpytKCI3jOmsVgOAi0t-6Ctdg07kaN48xf5awi9ne84bvoBLhAnJtIre8eOfF2Q4eSt8bAlIvFU-8DMeQz7O2snScsUvgwCF4X-GVT9gqes77Vp0jbOMPk6Q8frVLUkbNbCrMKvsXq7k~ueRO2i2tlfe4EUFyvnA__")',
+          backgroundSize: 'auto',
+          backgroundRepeat: 'repeat',
+          backgroundPosition: 'center',
+          padding: { xs: 1, sm: 2 },
+          width: '100%', // Asegurarse de que la barra ocupe todo el ancho
+        }}>
         <Toolbar sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
           <img src="https://cdn.aglty.io/scotia-bank-mexico/digital-factory/images/brand-scotia/banner-brand-scotiabank.svg" alt="Logo" style={{ width: 40, height: 40, marginRight: 16 }} />
         </Toolbar>
@@ -83,21 +84,21 @@ const GetCreditComponent = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell className="header-table-titles" sx={{   color: 'GrayText'}}>Nombre y Apellidos</TableCell>
-              <TableCell className="header-table-titles" sx={{   color: 'GrayText'}}>Correo Electrónico</TableCell>
-              <TableCell className="header-table-titles" sx={{   color: 'GrayText'}}>Número Telefónico</TableCell>
-              <TableCell className="header-table-titles" sx={{   color: 'GrayText'}}> Acciones</TableCell>
+              <TableCell className="header-table-titles" sx={{ color: 'GrayText' }}>Nombre y Apellidos</TableCell>
+              <TableCell className="header-table-titles" sx={{ color: 'GrayText' }}>Correo Electrónico</TableCell>
+              <TableCell className="header-table-titles" sx={{ color: 'GrayText' }}>Número Telefónico</TableCell>
+              <TableCell className="header-table-titles" sx={{ color: 'GrayText' }}> Acciones</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row, index) => (
               <TableRow key={index}>
                 <TableCell>{row.nombres.concat(" ").concat(row.apellidos)}</TableCell>
-                <TableCell sx={{   color: 'GrayText'}}>{row.correoElectronico}</TableCell>
-                <TableCell sx={{   color: 'GrayText'}}>{row.numeroTelefono}</TableCell>
+                <TableCell sx={{ color: 'GrayText' }}>{row.correoElectronico}</TableCell>
+                <TableCell sx={{ color: 'GrayText' }}>{row.numeroTelefono}</TableCell>
                 <TableCell>
                   <Button onClick={handleOpen} className='action'
-                  style={{ textDecoration: 'underline', textTransform: 'none' }}>
+                    style={{ textDecoration: 'underline', textTransform: 'none' }}>
                     Ver detalle
                   </Button>
 
@@ -142,7 +143,7 @@ const GetCreditComponent = () => {
                         </Grid2>
 
                         <Grid2 container spacing={2}>
-                          <Grid2  xs={6}>
+                          <Grid2 xs={6}>
                             {/* Fila 1 */}
                             <Grid2 container direction="column">
                               <Grid2 >
@@ -191,14 +192,26 @@ const GetCreditComponent = () => {
 
                         {/* Fila 2: Dos imágenes */}
                         <Grid2 container spacing={2}>
-                          <Grid2  xs={6}>
-                            <img src="https://via.placeholder.com/100" alt="Imagen 2" style={{ width: '100%', height: 'auto' }} />
+                          <Grid2 xs={12} sm={6}>
+                            <img
+                              src="https://via.placeholder.com/100"
+                              alt="Imagen 2"
+                              style={{ width: '100%', height: 'auto' }}
+                            />
                           </Grid2>
 
-                          <Divider orientation="vertical" flexItem />
+                          <Divider
+                            orientation="vertical"
+                            flexItem
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                          />
 
-                          <Grid2 xs={6}>
-                            <img src="https://via.placeholder.com/100" alt="Imagen 3" style={{ width: '100%', height: 'auto' }} />
+                          <Grid2 xs={12} sm={6}>
+                            <img
+                              src="https://via.placeholder.com/100"
+                              alt="Imagen 3"
+                              style={{ width: '100%', height: 'auto' }}
+                            />
                           </Grid2>
                         </Grid2>
                       </Grid2>

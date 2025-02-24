@@ -147,7 +147,7 @@ const RegisterCreditComponent = () => {
 
   const handleChange1 = (e) => {
     const { name, value } = e.target;
-    setFormData({
+    setFormData1({
       ...formData1,
       [name]: value,
     });
@@ -472,7 +472,7 @@ const RegisterCreditComponent = () => {
                 </FormControl>
 
                 <FormControl fullWidth margin="normal" error={!!errors1.direccion}>
-                  <InputLabel>Municipio</InputLabel>
+                  <InputLabel>Direccion</InputLabel>
                   <Select
                     label="Direccion"
                     name="direccion"
@@ -496,7 +496,7 @@ const RegisterCreditComponent = () => {
                   margin="normal"
                   name="ingresosmensuales"
                   value={formData1.ingresosmensuales}
-                  onChange={handleChange}
+                  onChange={handleChange1}
                   error={!!errors1.ingresosmensuales}
                   helperText={errors1.ingresosmensuales}
                 />
@@ -524,6 +524,7 @@ const RegisterCreditComponent = () => {
                   </Button>
                   <Button
                     variant="contained"
+                    type="submit"
                     sx={{
                       backgroundColor: 'orange',
                       color: '#fff',
