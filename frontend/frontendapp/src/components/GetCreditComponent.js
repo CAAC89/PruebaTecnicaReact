@@ -189,48 +189,7 @@ const GetCreditComponent = () => {
                                   </Grid2>
                                 </Grid2>
                               </Grid2>
-                              <Grid2 xs={6}></Grid2>
-                              <Grid2 xs={6}>
-                                {/* Fila 1 */}
-                                <Grid2 container direction="column">
-                                  <Grid2 >
-                                    <Typography variant="body2" fontWeight="bold">Llave 1:</Typography>
-                                  </Grid2>
-                                  <Grid2 >
-                                    <Typography variant="body2">Valor 1</Typography>
-                                  </Grid2>
-                                </Grid2>
-
-                                {/* Fila 2 */}
-                                <Grid2 container direction="column">
-                                  <Grid2 >
-                                    <Typography variant="body2" fontWeight="bold">Llave 2:</Typography>
-                                  </Grid2>
-                                  <Grid2 >
-                                    <Typography variant="body2">Valor 2</Typography>
-                                  </Grid2>
-                                </Grid2>
-
-                                {/* Fila 3 */}
-                                <Grid2 container direction="column">
-                                  <Grid2 >
-                                    <Typography variant="body2" fontWeight="bold">Llave 3:</Typography>
-                                  </Grid2>
-                                  <Grid2 >
-                                    <Typography variant="body2">Valor 3</Typography>
-                                  </Grid2>
-                                </Grid2>
-
-                                {/* Fila 4 */}
-                                <Grid2 container direction="column">
-                                  <Grid2 >
-                                    <Typography variant="body2" fontWeight="bold">Llave 4:</Typography>
-                                  </Grid2>
-                                  <Grid2 >
-                                    <Typography variant="body2">Valor 4</Typography>
-                                  </Grid2>
-                                </Grid2>
-                              </Grid2>
+                              
                             </Grid2>
                           </Grid2>
                         </Grid2>
